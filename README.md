@@ -36,7 +36,9 @@ node | liri.js | music-this | [song or artist]
 node | liri.js | concert-this | [artist]
 node | liri.js | party-time | null
 
-PICTURE HERE
+**Sample LIRI query**
+
+![Sample LIRI query](./images/liri_node_app_query.png)
 
 ### Technologies
 
