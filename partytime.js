@@ -21,18 +21,10 @@ var FS = function() {
 
           switch(array[0]) {
             case "movie-this":
-              // console.log(array[1]);
               omdb.movieSearch(array[1]);
-              // fs.appendFile('log.txt', command, function () {
-              //   console.log(command)});
-              // if (!array[1]) {
-              //   array[1] = "mr nobody";
-              // }
               break;
             case "music-this":
               spot.musicSearch(array[1]);
-              // fs.appendFile('random.txt', command, function () {
-              //   console.error();
               break;
             case "concert-this":
               bands.concertSearch(array[1]);
@@ -46,10 +38,3 @@ var FS = function() {
     };
 
 module.exports = FS;
-
-          // var dataArr = data.split(",");
-          
-          // searchType = dataArr[0];
-          // searchQuery = dataArr[1];
-      
-          // userCommand(searchType, searchQuery)

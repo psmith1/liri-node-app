@@ -21,27 +21,33 @@ var command = 'node' + ' liri.js ' + searchType + ' ' + searchQuery + ' ' + '\n'
 
   switch (searchType) {
     case "movie-this":
-      omdb.movieSearch(searchQuery);
-      fs.appendFile('log.txt', command, function () {
-      console.log(command)});
       if (!searchQuery) {
         searchQuery = "mr nobody";
       };
+      omdb.movieSearch(searchQuery);
+      fs.appendFileSync('log.txt', command, function () {
+      console.log(command)});
       break;
   
     case "music-this":
-      spot.musicSearch(searchQuery);
       if (!searchQuery) {
         searchQuery = "the sign ace of base";
       };
+      spot.musicSearch(searchQuery);
+      fs.appendFileSync('log.txt', command, function () {
+        console.log(command)});
       break;
     
     case "concert-this":
       bands.concertSearch(searchQuery);
+      fs.appendFileSync('log.txt', command, function () {
+        console.log(command)});
       break;
     
     case "party-time":
       fileSystem.callFromFile();
+      fs.appendFileSync('log.txt', command, function () {
+        console.log(command)});
       break;
     default:
       console.log(
